@@ -1,6 +1,10 @@
+use std::cmp::{Eq, PartialEq};
+use std::hash::{Hash, Hasher};
+
+
 // X86 registers
 #[repr(C)]
-#[derive(PartialEq, Debug, Clone, Copy)]
+#[derive(PartialEq, Eq, Hash, Debug, Clone, Copy)]
 pub enum RegisterX86 {
     INVALID = 0,
     AH,
